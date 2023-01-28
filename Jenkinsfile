@@ -1,6 +1,6 @@
 pipeline {
     environment {
-    registry = "mabcontreras/https://hub.docker.com/repository/docker/mabcontreras/dockerfile_diplomado"
+    registry = "https://github.com/mabel182/docker_grupo2/blob/main/Dockerfile"
     registryCredential = 'dockerhub'
     dockerImage = ''
   }
