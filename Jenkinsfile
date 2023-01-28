@@ -1,6 +1,6 @@
 pipeline {
     environment {
-    registry = "https://github.com/mabel182/docker_grupo2/blob/main/Dockerfile"
+    registry = "Dockerfile"
     registryCredential = 'dockerhub'
     dockerImage = ''
   }
@@ -14,6 +14,7 @@ pipeline {
   stage('Building our image') {
     steps{
     script {
+      
       dockerImage = docker.build registry + ":$BUILD_NUMBER"
       }
     }
