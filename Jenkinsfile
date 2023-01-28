@@ -8,7 +8,7 @@ pipeline {
     stages {
     stage('Cloning our Git') {
             steps {
-            git 'https://github.com/mabel182/docker_grupo2.git'
+            git branch: 'main', credentialsId: 'Github', url: 'https://github.com/mabel182/docker_grupo2.git'
             }
     }
   stage('Building our image') {
@@ -27,10 +27,4 @@ pipeline {
       }
     }
   }
-  stage('Cleaning up') {
-      steps{
-      sh "docker rmi $registry:$BUILD_NUMBER"
-      }
-      }
-    }
   }
