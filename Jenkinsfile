@@ -15,7 +15,7 @@ pipeline {
     steps{
     script {
       
-      dockerImage = docker.build + "gatus_img" + ":$BUILD_NUMBER" + -f registry "."
+      dockerImage = docker.build + gatus_img + ":$BUILD_NUMBER" + -f registry .
       }
     }
   }
